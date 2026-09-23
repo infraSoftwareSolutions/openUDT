@@ -107,6 +107,33 @@ namespace udt
                 replace(node->right, oldEle, newEle);
             }
 
+            void add_in_order(Node *root, std::vector<T> &result)
+            {
+                if (root == nullptr)
+                    return;
+                add_in_order(root->left, result);
+                result.push_back(root->item);
+                add_in_order(root->right, result);
+            }
+
+            void add_pre_order(Node *root, std::vector<T> &result)
+            {
+                if (root == nullptr)
+                    return;
+                result.push_back(root->item);
+                add_in_order(root->left, result);
+                add_in_order(root->right, result);
+            }
+
+            void add_post_order(Node *root, std::vector<T> &result)
+            {
+                if (root == nullptr)
+                    return;
+                add_in_order(root->left, result);
+                add_in_order(root->right, result);
+                result.push_back(root->item);
+            }
+
         public:
             binary() = default;
 
@@ -407,6 +434,48 @@ namespace udt
                     replace(root, oldEle, newEle);
                 else
                     replace(oldEle, newEle);
+            }
+
+            std::vector<T> to_postorder_vector(bool from_the_root)
+            {
+                std::vector<T> result;
+                if (from_the_root)
+                {
+                    add_post_order(root, result);
+                }
+                else
+                {
+                    add_post_order(current, result);
+                }
+                return result;
+            }
+
+            std::vector<T> to_inorder_vector(bool from_the_root)
+            {
+                std::vector<T> result;
+                if (from_the_root)
+                {
+                    add_in_order(root, result);
+                }
+                else
+                {
+                    add_in_order(current, result);
+                }
+                return result;
+            }
+
+            std::vector<T> to_preorder_vector(bool from_the_root)
+            {
+                std::vector<T> result;
+                if (from_the_root)
+                {
+                    add_pre_order(root, result);
+                }
+                else
+                {
+                    add_pre_order(current, result);
+                }
+                return result;
             }
 
             /// @brief Applies an in-place addition to the current node value.

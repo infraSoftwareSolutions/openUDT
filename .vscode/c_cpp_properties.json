@@ -4,9 +4,9 @@
             // --- Windows GCC Configuration via MSYS64 ---
             "name": "Windows",
             "includePath": [
-                "C:/Users/User/OneDrive/Documents/GitHub/openCF/include",
-                "C:/Users/User/OneDrive/Documents/GitHub/metaCore/include",
-                "C:/Users/User/OneDrive/Documents/GitHub/openUDT/include",
+                "C:/Users/User/OneDrive/Documents/GitHub/ISS/openCF/include",
+                "C:/Users/User/OneDrive/Documents/GitHub/ISS/openETL/include",
+                "C:/Users/User/OneDrive/Documents/GitHub/ISS/openUDT/include",
                 "C:/msys64/ucrt64/include"
             ],
             "defines": [
@@ -26,7 +26,7 @@
             ],
             "browse": {
                 "path": [
-                    "C:/Users/User/OneDrive/Documents/GitHub/openCF/include",
+                    "C:/Users/User/OneDrive/Documents/GitHub/ISS/openCF/include",
                     "C:/msys64/ucrt64/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true
