@@ -16,5 +16,34 @@
 
 #include "int/int128_t.hpp"
 #include "int/uint128_t.hpp"
+#include "cfrost/types.h"
+
+namespace udt
+{
+    ocf::vec<uint8_t> split_number(size_t number)
+    {
+        ocf::vec<uint8_t> result;
+        while (number > 0)
+        {
+            result.push_back(number % 10);
+            number /= 10;
+        }
+        return result;
+    }
+
+    uint8_t count_bits(size_t number, bool ones = true)
+    {
+        uint8_t result = 0;
+        while (number > 0)
+        {
+            if (ones)
+                result += number % 2;
+            else
+                result += number % 2 == 0 ? 1 : 0;
+            number /= 2;
+        }
+        return result;
+    }
+}
 
 #endif // OPENUDT___INT_HPP

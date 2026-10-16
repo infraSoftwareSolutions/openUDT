@@ -1,5 +1,5 @@
 /**
- * @file strObject.hpp
+ * @file string.hpp
  * @brief This header defines the udt::str and udt::str_r classes, which are custom str implementations.
  * The udt::str class manages its own memory using std::unique_ptr, while the udt::str_r class uses raw pointers for memory management.
  * Both classes provide various constructors, assignment operators, and member functions for str manipulation, including setting values, checking properties, and performing operations like capitalization and splitting.

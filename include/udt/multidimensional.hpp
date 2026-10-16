@@ -1,5 +1,5 @@
 /**
- * @file multidimensionalVector.hpp
+ * @file multidimensional.hpp
  * @brief A header file defining the multidimensionalVector class, which is a wrapper over std::vector
  * providing list-like operations and additional functionalities such as summation, multiplication, and reversal.
  * The class supports both fixed-size and dynamic-size vectors, and includes various constructors, member functions, and operator overloads to manipulate the vector data.

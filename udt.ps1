@@ -37,7 +37,7 @@ param(
 )
 
 # ===================== Global Settings =====================
-$script:Version = "beta 0.1.0"
+$script:Version = "beta 0.1.1"
 $script:LicenseFile = Join-Path -Path $PSScriptRoot -ChildPath "documentation/lic.txt"
 $script:HelpRoot = "help"
 $script:briefFile = "documentation/brief.txt"
@@ -96,8 +96,7 @@ Options:
                               help/<path_without_extension>.txt
 
 Examples:
-    .\udt.ps1 --help core/bfs.hpp
-    .\udt.ps1 --help basic/index.h
+    .\udt.ps1 --help ./index.h
 
 Note:
     - The documentation root folder is 'help' relative to the script location.

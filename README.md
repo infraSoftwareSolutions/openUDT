@@ -45,3 +45,14 @@ And many more unique data types are included throughout the openUDT ecosystem.
 openUDT is built on top of **metaCore**, which provides the foundational utilities and infrastructure required by the library collection.
 
 **note:** this project uses the namespace `udt`
+
+## API documentation
+
+The public headers are documented with Doxygen. Install Doxygen and run the
+following command from the repository root:
+
+```sh
+doxygen Doxyfile
+```
+
+The HTML API reference is generated at `output/doxygen/html/index.html`.

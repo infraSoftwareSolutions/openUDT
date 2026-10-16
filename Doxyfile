@@ -1,0 +1,28 @@
+PROJECT_NAME           = "openUDT"
+PROJECT_BRIEF          = "Open Unique Data Types for C++"
+OUTPUT_DIRECTORY       = output/doxygen
+
+INPUT                  = include documentation/doxygen-mainpage.md
+RECURSIVE              = YES
+FILE_PATTERNS          = *.hpp *.md
+EXCLUDE_PATTERNS       = */test/*
+USE_MDFILE_AS_MAINPAGE = documentation/doxygen-mainpage.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+WARN_IF_UNDOCUMENTED   = NO
+WARN_NO_PARAMDOC       = NO
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = NO
+SEARCH_INCLUDES        = NO
+INPUT_ENCODING         = UTF-8
+OUTPUT_LANGUAGE        = English
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO

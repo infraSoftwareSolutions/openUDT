@@ -218,7 +218,8 @@ namespace udt
          * @brief Clear the contents of the triple by resetting all elements to their default values.
          * This member function assigns the default-constructed value of type T to each of the three members (first, second, third), effectively resetting the triple to a "cleared" state. The function is declared constexpr and noexcept, allowing it to be used in constant expressions and guaranteeing that it will not throw exceptions.
          * @note The function does not take any parameters and does not return a value. After calling clear(), all members of the triple will be equal to T(), which is the default value for type T (e.g., 0 for numeric types, empty string for std::string, etc.).
-         * @complexity Constant time O(1) since it performs a fixed number of assignments regardless of the state of the object.
+         * @par Complexity
+         * Constant time O(1) since it performs a fixed number of assignments regardless of the state of the object.
          * @pre The type T must be default-constructible for this function to compile successfully, as it relies on T() to obtain the default value.
          * @post The members first, second, and third of this triple will be set to T(), effectively clearing the contents of the triple.
          * @exception This function is noexcept and does not throw exceptions. If T's default constructor were to throw, the program would call std::terminate due to the noexcept specification.
